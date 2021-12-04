@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Js & Bootstrap</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>JS</h1>
+    <div id="FormHide">
+        <input type="text" id="UserNameTXT" placeholder="username" onblur="CheckUser()">
+        <input type="password" id="PasswordTXT" placeholder="password">
+        <input type="submit" value="Login" onclick="AlertName()">
+        <input type="button" value="Clear" onclick="Clear()">
+    </div>
+    
+    <script>
+        function AlertName() {
+            var userName = document.getElementById('UserNameTXT');
+            alert(userName.toString());
+        }
+        function Clear() {
+            $("#UserNameTXT").val("");
+            $("#PasswordTXT").val("");
+        }
+        function FillValues() {
+            $("#UserNameTXT").val("Salah");
+            $("#PasswordTXT").val("Osama");
+        }
+        //Data type is built in 
+        // var userName = "mohamed";//string
+        // //alert(userName);
+        // var age = 20;//integer
+        // var birthday = Date(2000-05-10);//date
+        // var IsAdult = true;//boolean
+        // var Students = ["Ali","Ahmed","Ga3fer"];
+        // console.log(Students);
+        // var MixedValues=["Ali",123,"mohamed",true];
+        // console.log(MixedValues[0]);
+        // function ToConsole() {
+        //     console.log("Hello from Function");
+        // }
+        // ToConsole();
+        //var userName = $("#UserNameTXT").val();
+        var userName = "Mohamed";
+        function CheckUser() {
+            console.log("user name is ", userName);
+            if (userName == "Mohamed") {
+                alert("hi Mohamed");
+            }
+        }
+        
+        var Students = ["Ali", "Ahmed", "Ga3fer"];//length 3
+
+        //Object
+        var user = {
+            Name:"Ali",
+            Passsword:1235
+        }
+        //looping
+        for (let index = 0; index < Students.length; index++) {
+            alert(Students[index]);
+        }
+
+        //while
+        var index = 0;
+        while (index < Students.length) {
+            console.log(Students[index]);
+            index++;
+        }
+
+        function AddTo(FirstValue, SecoundValue) {
+            console.log(FirstValue + SecoundValue);
+        }
+        function FormToggle(){
+            $("#FormHide").toggle(2000);
+        }
+        AddTo(5, 7);
+
+    </script>
+</body>
+
+</html>
